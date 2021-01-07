@@ -14,4 +14,7 @@
     <string name="when">When will?</string>
     <string name="create_task">Create Now</string>
     <string name="cancel">Cancel</string>
+    <string name="edit_task_details">Edit Task Details</string>
+    <string name="save_update">Save Update</string>
+    <string name="delete">Delete</string>
 </resources>

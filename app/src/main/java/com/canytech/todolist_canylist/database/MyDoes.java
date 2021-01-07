@@ -5,14 +5,15 @@ public class MyDoes {
     String titleDoes;
     String descDoes;
     String dateDoes;
+    String keyDoes;
 
-    public MyDoes() {
-    }
+    public MyDoes() {}
 
-    public MyDoes(String titleDoes, String descDoes, String dateDoes) {
+    public MyDoes(String titleDoes, String descDoes, String dateDoes, String keyDoes) {
         this.titleDoes = titleDoes;
         this.descDoes = descDoes;
         this.dateDoes = dateDoes;
+        this.keyDoes = keyDoes;
     }
 
     public String getTitleDoes() {
@@ -37,5 +38,13 @@ public class MyDoes {
 
     public void setDateDoes(String dateDoes) {
         this.dateDoes = dateDoes;
+    }
+
+    public String getKeyDoes() {
+        return keyDoes;
+    }
+
+    public void setKeyDoes(String keyDoes) {
+        this.keyDoes = keyDoes;
     }
 }

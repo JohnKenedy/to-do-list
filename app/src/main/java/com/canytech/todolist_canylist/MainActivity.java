@@ -24,8 +24,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView titlePage, subTitlePage, endPage;
-
     DatabaseReference reference;
     RecyclerView rv_does;
     ArrayList<MyDoes> list;
@@ -53,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference().child("BoxDoes");
         doesAdapter = new DoesAdapter(MainActivity.this, list);
         rv_does.setAdapter(doesAdapter);
+
+        //TODO Fix Bugs: when trying to edit without restarting the app, and when not editing all parameters
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -73,6 +73,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "No Data", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }

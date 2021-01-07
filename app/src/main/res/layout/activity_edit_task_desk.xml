@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_white"
+    android:orientation="vertical"
+    tools:context=".NewTaskActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@color/dark_blue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/edit_task_details"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/less_blue" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_item"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/add_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/add_title"
+                android:textColor="@color/dark_blue"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/title_does"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_edit_text_selector"
+                android:hint="@string/hint_does"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/dark_blue" />
+
+            <TextView
+                android:id="@+id/add_item_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/add_desc"
+                android:textColor="@color/dark_blue"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/desc_does"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_edit_text_selector"
+                android:hint="@string/add_desc_hint"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/dark_blue" />
+
+            <TextView
+                android:id="@+id/add_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/timeline"
+                android:textColor="@color/dark_blue"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/date_does"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_edit_text_selector"
+                android:hint="@string/when"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/dark_blue" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save_update"
+        android:layout_marginTop="30dp"
+        android:text="@string/save_update"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_medium"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_btn"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="55dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_delete"
+        android:text="@string/delete"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_medium"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_btn_cancel"
+        android:textColor="@color/pink"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="55dp" />
+
+</LinearLayout>

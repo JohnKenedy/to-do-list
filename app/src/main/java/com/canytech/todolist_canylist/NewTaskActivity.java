@@ -1,14 +1,13 @@
 package com.canytech.todolist_canylist;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +25,7 @@ public class NewTaskActivity extends AppCompatActivity {
     EditText titleDoes;
     EditText descDoes;
     EditText dateDoes;
+    String keyDoes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class NewTaskActivity extends AppCompatActivity {
         btnSaveTask = findViewById(R.id.btn_save_task);
         btnCancel = findViewById(R.id.btn_cancel_task);
         doesNum = new Random().nextInt();
+        keyDoes = Integer.toString(doesNum);
 
         btnSaveTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,8 +54,9 @@ public class NewTaskActivity extends AppCompatActivity {
                         snapshot.getRef().child("titleDoes").setValue(titleDoes.getText().toString());
                         snapshot.getRef().child("descDoes").setValue(descDoes.getText().toString());
                         snapshot.getRef().child("dateDoes").setValue(dateDoes.getText().toString());
+                        snapshot.getRef().child("keyDoes").setValue(keyDoes);
 
-                        Intent intent = new Intent( NewTaskActivity.this, MainActivity.class);
+                        Intent intent = new Intent(NewTaskActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
 
