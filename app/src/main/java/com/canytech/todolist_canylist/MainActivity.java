@@ -1,6 +1,9 @@
 package com.canytech.todolist_canylist;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,11 +30,19 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rv_does;
     ArrayList<MyDoes> list;
     DoesAdapter doesAdapter;
+    Button btnAddNew;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnAddNew = findViewById(R.id.btn_add_new);
+
+        btnAddNew.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NewTaskActivity.class);
+            startActivity(intent);
+        });
 
         // working with data
         rv_does = findViewById(R.id.rv_does);
@@ -39,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<MyDoes>();
 
         // get data from firebase
-        reference = FirebaseDatabase.getInstance().getReference().child("Do To List Cany");
+        reference = FirebaseDatabase.getInstance().getReference().child("BoxDoes");
         doesAdapter = new DoesAdapter(MainActivity.this, list);
         rv_does.setAdapter(doesAdapter);
         reference.addValueEventListener(new ValueEventListener() {

@@ -49,9 +49,9 @@ public class DoesAdapter extends RecyclerView.Adapter <DoesAdapter.MyViewHolder>
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            titleDoes = (TextView) itemView.findViewById(R.id.title_does);
-            descDoes = (TextView) itemView.findViewById(R.id.desc_does);
-            dateDoes = (TextView) itemView.findViewById(R.id.date_does);
+            titleDoes = (TextView) itemView.findViewById(R.id.title_does_item);
+            descDoes = (TextView) itemView.findViewById(R.id.desc_does_item);
+            dateDoes = (TextView) itemView.findViewById(R.id.date_does_item);
         }
     }
 }

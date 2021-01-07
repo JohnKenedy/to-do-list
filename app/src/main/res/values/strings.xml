@@ -4,4 +4,14 @@
     <string name="my_does_desc">Finish Them Quickly Today</string>
     <string name="no_does">No More Does</string>
     <string name="date">Tomorrow</string>
+    <string name="plus">+</string>
+    <string name="create_new_does">Create New Does</string>
+    <string name="add_title">Add Title</string>
+    <string name="hint_does">What you do?</string>
+    <string name="add_desc_hint">How do you do that?</string>
+    <string name="add_desc">Description</string>
+    <string name="timeline">Timiline</string>
+    <string name="when">When will?</string>
+    <string name="create_task">Create Now</string>
+    <string name="cancel">Cancel</string>
 </resources>
