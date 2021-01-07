@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">To Do List - CanyList</string>
+    <string name="my_does">My Does</string>
+    <string name="my_does_desc">Finish Them Quickly Today</string>
+    <string name="no_does">No More Does</string>
+    <string name="date">Tomorrow</string>
 </resources>
